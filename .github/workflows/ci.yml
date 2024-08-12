@@ -29,7 +29,7 @@ jobs:
         script: |
           sudo apt-get update
           sudo apt-get install -y docker-compose
-          cd /micro/microservice-1
+          cd /root/micro/microservice-1
           docker build --tag microservice-1:latest .
           
     
