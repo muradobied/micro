@@ -43,6 +43,20 @@ jobs:
           cd /root/micro/microservice-2
           docker build --tag microservice-2:latest .
           docker run --name microservice-2container -d microservice-2:latest
+
+          docker stop microservice-3container
+          docker rm microservice-3container
+          cd /root/micro/microservice-3
+          docker build --tag microservice-3:latest .
+          docker run --name microservice-3container -d microservice-3:latest
+
+          docker stop microservice-4container
+          docker rm microservice-4container
+          cd /root/micro/microservice-4
+          docker build --tag microservice-4:latest .
+          docker run --name microservice-4container -d microservice-4:latest
+
+          
           docker image prune -a --force
     
 
