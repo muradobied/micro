@@ -56,6 +56,10 @@ jobs:
           docker build --tag microservice-4:latest .
           docker run --name microservice-4container -d microservice-4:latest
 
+          cd /root/micro
+          docker-compose up -d
+
+
           
           docker image prune -a --force
     
