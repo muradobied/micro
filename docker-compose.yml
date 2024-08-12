@@ -4,28 +4,18 @@ services:
     build: ./microservice-1
     ports:
       - "3001:3001"
-    networks:
-      - microservices-network
+  
   microservice-2:
     build: ./microservice-2
     ports:
       - "3002:3002"
-    networks:
-      - microservices-network
+  
   microservice-3:
     build: ./microservice-3
     ports:
       - "3003:3003"
-    networks:
-      - microservices-network
+   
   microservice-4:
     build: ./microservice-4
     ports:
       - "3004:3004"
-    networks:
-      - microservices-network
-
-
-  networks:
-  microservices-network:
-    driver: bridge
