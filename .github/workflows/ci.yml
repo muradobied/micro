@@ -29,7 +29,7 @@ jobs:
         script: |
           sudo apt-get update
           sudo apt-get install -y docker-compose
-          docker run --restart
+          systemctl restart docker
           
           docker stop microservice-1
           docker rm microservice-1
