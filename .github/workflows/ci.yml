@@ -30,14 +30,20 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y docker-compose
           docker run --restart
+
+          
           docker stop microservice-1container
           docker rm microservice-1container
-          
           cd /root/micro/microservice-1
           docker build --tag microservice-1:latest .
           docker run --name microservice-1container -d microservice-1:latest
+
+          docker stop microservice-2container
+          docker rm microservice-2container
+          cd /root/micro/microservice-2
+          docker build --tag microservice-2:latest .
+          docker run --name microservice-2container -d microservice-2:latest
           docker image prune -a --force
-          
     
 
 
