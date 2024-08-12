@@ -63,7 +63,7 @@ jobs:
 
 
           
-          docker image prune -a --force
+          docker image prune -af
     
 
 
