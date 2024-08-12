@@ -29,7 +29,10 @@ jobs:
         script: |
           sudo apt-get update
           sudo apt-get install -y docker-compose
-          docker stop microservice-1container || true
+          docker run --restart
+          docker stop microservice-1container
+          docker rm microservice-1container
+          
           cd /root/micro/microservice-1
           docker build --tag microservice-1:latest .
           docker run --name microservice-1container -d microservice-1:latest
