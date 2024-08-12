@@ -30,24 +30,26 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y docker-compose
           docker run --restart
-
           
           docker stop microservice-1
           docker rm microservice-1
+          docker rmi -f microservice-1
           docker stop microservice-2
           docker rm microservice-2
+          docker rmi -f microservice-2
           docker stop microservice-3
           docker rm microservice-3
+          docker rmi -f microservice-3
           docker stop microservice-4
           docker rm microservice-4
+          docker rmi -f microservice-4
           
           cd /root/micro
           docker compose down
           docker compose pull
+          git pull origin
           docker compose up -d --build
 
-
-          
           docker image prune -af
     
 
