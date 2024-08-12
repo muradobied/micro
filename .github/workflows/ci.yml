@@ -36,7 +36,7 @@ jobs:
           cd /root/micro/microservice-1
           docker build --tag microservice-1:latest .
           docker run --name microservice-1container -d microservice-1:latest
-          
+          docker image prune -a --force
           
     
 
